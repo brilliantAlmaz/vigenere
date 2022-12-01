@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vigenere.io</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="container">
+				<div class="header__body">
+					<div class="header__logo">Vigenere<span>.io</span></div>
+					<div class="header__burger burger">
+						<span></span>
+					</div>
+					<div class="header__menu">
+						<ul class="header__list">
+							<li>
+								<a href="" class="header__link">Инфо</a>
+							</li>
+							<li>
+								<a href="#cypher" class="header__link important">Шифрование</a>
+							</li>
+							<li>
+								<a href="#author" class="header__link">Автор</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="about" id='info'>
+				<div class="container">
+					<div class="about__title title">Что это такое</div>
+					<ul class="about__list">
+						<li class="about__item">
+							<div class="about__item-textblock">
+								<div class="about__item-title">Да кто этот ваш Виженер?</div>
+								<div class="about__item-closer"></div>
+							</div>
+							<div class="about__item-text">
+								Шифр Виженера — метод полиалфавитного шифрования буквенного текста с использованием ключевого слова.
+							</div>
+						</li>
+						<li class="about__item">
+							<div class="about__item-textblock">
+								<div class="about__item-title">Принцип работы</div>
+								<div class="about__item-closer"></div>
+							</div>
+							<div class="about__item-text">
+								Находим в таблице Виженера строку, соответствующую первому символу ключевого слова; в данной строке находим первый символ зашифрованного текста. Столбец, в котором находится данный символ, соответствует первому символу исходного текста. Следующие символы зашифрованного текста расшифровываются подобным образом.
+							</div>
+						</li>
+						<li class="about__item">
+							<div class="about__item-textblock">
+								<div class="about__item-title">Как его использовать?</div>
+								<div class="about__item-closer"></div>
+							</div>
+							<div class="about__item-text">
+								Введите текст, который хотите <span class='text-cypher'>зашифровать</span>/<span class='text-decypher'>расшифровать</span>, введите ключевое слово, и нажмите на кнопку. В результате Вы получите <span class='text-cypher'>зашифрованный</span>/<span class='text-decypher'>расшифрованный</span> текст.
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="cypher__block" id='cypher'>
+				<div class="cypher__block-slider">
+					<div class="cypher">
+						<div class="container">
+							<div class="cypher__title-row">
+								<div class="cypher__title title">Шифрование</div>
+								<div class="cypher__block-btn btn">
+									<img src="cycle.svg" alt="">
+								</div>
+							</div>
+							<form action="#">
+								<div class="cypher__form-title title">Введите данные</div>
+								<textarea name="text" id=""  placeholder='Напишите текст, который хотите зашифровать' class='text'></textarea>
+								<!--file reader here-->
+								<div class="cypher__row">
+									<label for="file-cypher" class='btn'>
+										Загрузить Файл
+									</label>
+									<input type="file" class='file' id='file-cypher' name ='fileReadCypher'>
+									<div class="clear__btn btn">Очистить поля</div>
+								</div>
+								<input type="text" class="key" placeholder='Вставьте ключ'>
+
+								<div class="cypher-btn btn">Шифруемся</div>
+								<div class="cypther__result cypher__form-title">
+									Результат
+								</div>
+								<textarea name="" id="" class='cypher-result'></textarea>
+							</form>
+						</div>
+					</div>
+					<div class="decypher">
+						<div class="container">
+							<div class="cypher__title-row">
+								<div class="decypher__title title">Дешифрование</div>
+								<div class="cypher__block-btn decypher__block-btn btn">
+									<img src="cycle.svg" alt="">
+								</div>
+							</div>
+							<form action="#">
+								<div class="cypher__form-title title" style='color:#006d77'>Введите данные</div>
+								<textarea name="text" id="" cols="30" placeholder='Напишите текст, который хотите расшифровать' class='decypher__text'></textarea>
+								<!--file reader here-->
+								<div class="cypher__row">
+									<label for="file-decypher" class='cypher__file decypher-btn btn'>
+										Загрузить Файл
+									</label>
+									<input type="file" class='fileD' id='file-decypher' name ='fileReadCypher'>
+									<div class="clear__btn decypher-btn btn">Очистить поля</div>
+								</div>
+								<input type="tel" class="decypher__key" placeholder='Вставьте ключ'>
+								<div class="decypher-btn btn" id='decypherBtn'>Расшифруемся</div>
+								<div class="cypther__result cypher__form-title" style='color:#006d77'>
+									Результат
+								</div>
+								<textarea name="" id="" class='decypher-result'></textarea>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="author" id='author'>
+				<div class="container">
+					<div class="author__title title">Автор</div>
+					<div class="author__row">
+						<div class="author__item">
+							<div class="author__image">
+								<img src="me.jpg" alt="">
+							</div>
+						</div>
+						<div class="author__item">
+							<div class="author__student">
+								Тухватулин Алмаз<br>гр. ПИ-1-20
+							</div>
+							<div class="author__about">
+								Данный сайт был создан в рамках выполнения лабораторной работы №3 по дисциплине "Информационная безопасность".
+								<br>
+								<br>
+								Исходный код доступен <a href='https://github.com/brilliantAlmaz/vigenere'>здесь</a>.
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+
+			</div>
+		</div>
+
+	</div>
+	<script src='style.js'></script>
+	<script src='cypher.js'></script>
+</body>
+</html>
